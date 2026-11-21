@@ -27,7 +27,7 @@ export async function GET(req: Request, { params }: { params: Promise<{ id: stri
     const { id } = await params;
     const db = await getDb();
 
-    const students = db.collection("students");
+    const students = db.collection<{ _id: ObjectId | string } & Record<string, unknown>>("students");
     let s: any = null;
     if (ObjectId.isValid(id)) {
       s = await students.findOne({ _id: new ObjectId(id) });

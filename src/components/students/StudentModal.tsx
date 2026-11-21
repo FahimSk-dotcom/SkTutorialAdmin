@@ -720,7 +720,7 @@ export function StudentModal({
                         <button
                           type="button"
                           onClick={() => setIsParentResetOpen(true)}
-                          disabled={parentLookupStatus === "loading" || !isSavedParentMobileUnchanged}
+                          disabled={!isSavedParentMobileUnchanged}
                           className="inline-flex min-h-10 items-center justify-center gap-2 px-4 py-2 text-xs font-semibold text-indigo-700 dark:text-indigo-300 border border-indigo-500/30 bg-indigo-500/10 hover:bg-indigo-500/15 rounded-xl transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                         >
                           <KeyRound className="w-4 h-4" />
